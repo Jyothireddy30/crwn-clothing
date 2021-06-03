@@ -1,15 +1,17 @@
 import React from 'react'
+import "./MenuItem.scss"
 
-function MenuItem({items}) {
+function MenuItem({items,imageUrl,size}) {
     return (
-           <div className='directory-menu'>
-                   <div className='menu-item'>
+           
+           <div className={`${size} menu-item`} 
+           style={{backgroundImage:`url(${imageUrl})`}}
+           >
                       <div className='content'>
-                          <div className='title'>{items}</div>
-                               <span className='subtitle'>SHOP NOW</span>
+                          <div className='title'>{items.toUpperCase()}</div>
+                          <span className='subtitle'>SHOP NOW</span>
                       </div>
            </div>
-           </div> 
     
     )
 }
